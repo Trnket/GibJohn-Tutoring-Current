@@ -51,12 +51,16 @@ def login():
     if request.method == "POST":
         username = request.form.get('username')
         password = request.form.get('password')
-        if len(password) <= 7:
-            return render_template("error.html", error="Password must be at least 8 characters long")
-        hashed = hashlib.sha256(password.encode()).hexdigest()
+        hashed = hashlib.sha512(password.encode()).hexdigest()
         conn = sqlite3.connect('database.db')
         c = conn.cursor()
-        c.execute("SELECT * FROM LoginDetails WHERE Username = ?", (username,hashed))
+        logCheck = c.execute('''SELECT * FROM LoginDetails WHERE
+                              Username = ? AND Password = ?''',(username, hashed)).fetchone()
+        if logCheck is None:
+            return render_template("error.html", error="Invalid username or password")
+        conn.close()
+        session["username"] = request.form.get("username")
+        return render_template("index.html", username = session.get("username"))
     return render_template("login.html")
 
 @app.route("/bookings")
