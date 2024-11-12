@@ -28,8 +28,10 @@ def signup():
         email = request.form.get('email')
         username = request.form.get('username')
         ConfirmPass = request.form.get('ConfirmPass')
-        if len(password) <= 7 or password != ConfirmPass:
+        if len(password) <= 7 :
             return render_template("error.html", error="Password must be at least 8 characters long")
+        if password != ConfirmPass:
+            return render_template("error.html", error="Confirm password must match password")
         for z in password:
             if z not in acceptedChars:
                 return render_template("error.html", error="Password must contain at least one special character")
