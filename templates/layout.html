@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='layout_style.css')}}">
+    <title>Gibjohn Tutoring</title>
+
+</head>
+<body>
+
+    <header>
+        <div>
+            <img id="logo1" src="{{url_for('static', filename=('GibJohn_Tutoring.png'))}}">
+        </div>
+
+        <div class="navbar_middle">
+            <a href="{{url_for('index')}}">Home</a>
+            <a href="{{url_for('about')}}"> About Us</a>
+            <a href="{{url_for('bookings')}}"> Bookings</a>
+        </div>
+    
+        <div class="Login_Signup">
+            <a id="Login" href="{{url_for('login')}}">Login</a>
+            <a id="Signup" href="{{url_for('signup')}}">Signup</a>
+        </div>
+    
+    </header>
+    {% block body %}{% endblock %}
+    <footer><p id="footP"> © 2055 Gibjohn Tutoring</p></footer>
+</body>
+</html>
