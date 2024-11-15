@@ -3,6 +3,7 @@
     font-family: fantasy;
     letter-spacing: 1px;
     font-weight: lighter;
+    color: #ffd000;
 }
 
 body, html{
@@ -11,7 +12,7 @@ body, html{
     width: 100%;
 }
 footer{
-    background-image: linear-gradient(to right, rgb(126, 221, 126), rgb(27, 155, 27));
+    background-image: linear-gradient(to right, rgb(39, 39, 39), rgb(0, 0, 0));
     bottom: 0;
     position: fixed;
     width: 100%;
@@ -33,7 +34,7 @@ footer{
 
 
 header {
-    background-image: linear-gradient(to right, rgb(126,221,126), rgb(27,155,27));
+    background-image: linear-gradient(to right, rgb(39, 39, 39), rgb(0, 0, 0));
     padding: 1%;
     display: flex;
     justify-content: space-between;
@@ -50,5 +51,5 @@ justify-content: space-evenly;
 
 
 a:hover {
-    color: #696969;
+    color: #ffd000;
 }

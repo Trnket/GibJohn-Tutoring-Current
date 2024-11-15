@@ -1,4 +1,8 @@
 import sqlite3
+
+#This section of code is used to generate a database when ran with the components listed
+
+
 conn = sqlite3.connect('database.db')
 
 c = conn.cursor()
