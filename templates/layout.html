@@ -11,7 +11,7 @@
 
     <header>
         <div>
-            <img id="logo1" src="{{url_for('static', filename=('GibJohn_Tutoring.png'))}}">
+            <img id="logo1" src="{{url_for('static', filename=('GibJohn_Tutoring.png'))}}" height="100px">
         </div>
 
         <div class="navbar_middle">
@@ -19,11 +19,22 @@
             <a href="{{url_for('about')}}"> About Us</a>
             <a href="{{url_for('bookings')}}"> Bookings</a>
         </div>
-    
+        
+        {% if username %} 
+ 
+        <div>
+            <a id="Signout" href="{{url_for('signout')}}">Signout</a>
+        </div>
+
+        {% else %} 
+
+
         <div class="Login_Signup">
             <a id="Login" href="{{url_for('login')}}">Login</a>
             <a id="Signup" href="{{url_for('signup')}}">Signup</a>
         </div>
+
+        {% endif %} 
     
     </header>
     {% block body %}{% endblock %}
