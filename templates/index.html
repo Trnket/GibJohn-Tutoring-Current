@@ -7,8 +7,18 @@
 {% block body %} 
 
 <div class="container">
-    <div class="box">Box 1</div>
-    <div class="box">Box 2</div>
+    <div class="box">
+        <img src="{{url_for('static', filename=('Tutoring.png '))}}" alt="You" class="box-image">
+        <p>What the website is about brief</p>
+    </div>
+    <div class="box">
+        <img src="{{url_for('static', filename=('courses_icons.png '))}}" alt="Courses Icons" class="box-image">
+        <p>We offer a wide range of courses which are suitable for all types of ages and education levels.</p>
+    </div>
+    <div class="box">
+        <img src="image3.jpg" alt="Blind" class="box-image">
+        <p>Box 3 Content</p>
+    </div>
 </div>
 
 {% endblock %} 

@@ -48,12 +48,17 @@ width: 500px;
 justify-content: space-evenly;
 }
 
-
+.Login_Signup {
+    text-align: center;
+    display: flex;
+    width: 150px;
+    justify-content: space-evenly;
+}
 
 a:hover {
     color: #ff5500;
 }
 
 body {
-    background-color:rgb(96, 96, 96)
+    background-color:#606060
 }
