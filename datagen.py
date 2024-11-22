@@ -8,10 +8,23 @@ conn = sqlite3.connect('database.db')
 c = conn.cursor()
 
 c.execute("""CREATE TABLE LoginDetails (
-          Username text UNIQUE NOT NULL,
+          Student text UNIQUE NOT NULL,
           Password text NOT NULL,
           Email text NOT NULL UNIQUE
           )""")
+
+c.execute("""CREATE TABLE TeacherDetails (
+          Teacher text UNIQUE NOT NULL,
+          Password text NOT NULL,
+          Email text NOT NULL UNIQUE
+          )""")
+
+c.execute("""CREATE TABLE AdminDetails (
+          Admin text UNIQUE NOT NULL,
+          Password text NOT NULL,
+          Email text NOT NULL UNIQUE
+          )""")
+
 conn.commit()
 
 conn.close()

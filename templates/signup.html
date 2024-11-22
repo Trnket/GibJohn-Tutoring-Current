@@ -1,20 +1,20 @@
+<head></head>
+    <link rel="stylesheet" href="{{url_for('static', filename='signup_login_styles.css')}}">
+</head>
+
 {% extends "layout.html" %} 
 
-{% block body %} 
+{% block body %}
 
-    <form action="/signup" method="POST"> 
-        <label for="username">Username</label>
-        <input type="text" name="username" placeholder="Username">
-        <label for="password">Password</label>
-        <input type="password" name="password" placeholder="Password">
-        <label for="ConfirmPass">Confirm Password</label>
-        <input type="password" name="ConfirmPass" placeholder="Confirm Password">
-        <label for="email">Email</label>
-        <input type="email" name="email" placeholder="Email">
-
-        <button type="submit">Sign Up</button> 
-
-    </form>
-
-
+<div class="container">
+    <div class="box">
+        <h2>Student</h2>
+        <a href="{{url_for('student_signup')}}" class="button">Student Signup</a>
+    </div>
+    <div class="box">
+        <h2>Teacher</h2>
+        <a href="{{url_for('teacher_signup')}}" class="button">Teacher Signup</a>
+    </div>
+</div>
+ 
 {% endblock %} 

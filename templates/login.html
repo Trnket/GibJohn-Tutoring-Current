@@ -1,15 +1,24 @@
+<head></head>
+    <link rel="stylesheet" href="{{url_for('static', filename='signup_login_styles.css')}}">
+</head>
+
 {% extends "layout.html" %} 
 
-{% block body %} 
+{% block body %}
 
-    <form action="/login" method="post"> 
-        <label for="username">Username</label>
-        <input type="text" name="username" placeholder="Username">
-        <label for="password">Password</label>
-        <input type="password" name="password" placeholder="Password">
-
-        <button type="submit">Log In</button> 
-
-    </form> 
-
+<div class="container">
+    <div class="box">
+        <h2>Student</h2>
+        <a href="{{url_for('student_login')}}" class="button">Student Login</a>
+    </div>
+    <div class="box">
+        <h2>Teacher</h2>
+        <a href="{{url_for('teacher_login')}}" class="button">Teacher Login</a>
+    </div>
+    <div class="box">
+        <h2>Admin</h2>
+        <a href="{{url_for('admin_login')}}" class="button">Admin Login</a>
+    </div>
+</div>
+ 
 {% endblock %} 
