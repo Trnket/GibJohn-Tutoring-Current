@@ -9,14 +9,17 @@
 <div class="container">
     <div class="box">
         <h2>Student</h2>
+        <img src="{{url_for('static', filename=('student.png '))}}" alt="Picture of Student ">
         <a href="{{url_for('student_login')}}" class="button">Student Login</a>
     </div>
     <div class="box">
         <h2>Teacher</h2>
+        <img src="{{url_for('static', filename=('teacher.png '))}}" alt="Picture of Teacher ">
         <a href="{{url_for('teacher_login')}}" class="button">Teacher Login</a>
     </div>
     <div class="box">
         <h2>Admin</h2>
+        <img src="{{url_for('static', filename=('admin.png '))}}" alt="Picture of Admin ">
         <a href="{{url_for('admin_login')}}" class="button">Admin Login</a>
     </div>
 </div>
