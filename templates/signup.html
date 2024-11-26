@@ -1,5 +1,5 @@
 <head></head>
-    <link rel="stylesheet" href="{{url_for('static', filename='signup_login_styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='menu_signup_login_styles.css')}}">
 </head>
 
 {% extends "layout.html" %} 
@@ -9,10 +9,15 @@
 <div class="container">
     <div class="box">
         <h2>Student</h2>
+        <img src="{{url_for('static', filename=('student.png '))}}" alt="Picture of Student ">
         <a href="{{url_for('student_signup')}}" class="button">Student Signup</a>
     </div>
     <div class="box">
+        <img class="Logo" src="{{url_for('static', filename=('GibJohn_Tutoring.png '))}}" alt="GibJohn Tutoring Logo ">
+    </div>
+    <div class="box">
         <h2>Teacher</h2>
+        <img src="{{url_for('static', filename=('teacher.png '))}}" alt="Picture of Teacher ">
         <a href="{{url_for('teacher_signup')}}" class="button">Teacher Signup</a>
     </div>
 </div>

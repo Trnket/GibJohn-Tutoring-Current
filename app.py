@@ -25,6 +25,12 @@ def about():
 
 
 
+@app.route("/courses", methods=["POST", "GET"])
+def courses():
+    return render_template("courses.html", student = session.get("username"), teacher = session.get("username"))
+
+
+
 #This section calls the login in selection menu
 @app.route("/signup", methods=["POST", "GET"])
 def signup():
@@ -203,7 +209,24 @@ def admin_login():
 
 
 
+@app.route('/booking', methods=['POST', 'GET'])
+def booking():
+    if request.method == "POST":
+        student_name = request.form['student_name']
+        subject = request.form['subject']
+        teacher_name = request.form['teacher_name']
+        date = request.form['date']
+        time = request.form['time']
 
+        conn = sqlite3.connect("database.db")
+        cursor = conn.cursor()
+        cursor.execute('INSERT INTO Bookings (student_name, subject, teacher_name, date, time) VALUES (?, ?, ?, ?, ?)', (student_name, subject, teacher_name, date, time))
+        conn.commit()
+        cursor.close()
+        conn.close()
+
+        return render_template("index.html", Admin = session.get("username"), student = session.get("username"), teacher = session.get("username"))
+    return render_template("booking.html", Admin = session.get("username"), student = session.get("username"), teacher = session.get("username"))
 
 
 

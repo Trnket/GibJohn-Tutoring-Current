@@ -14,13 +14,14 @@
             <img id="logo1" src="{{url_for('static', filename=('GibJohn_Tutoring.png'))}}" height="100px">
         </div>
 
+        
+        {% if student or teacher %} 
         <div class="navbar_middle">
             <a href="{{url_for('index')}}">Home</a>
             <a href="{{url_for('about')}}"> About Us</a>
+            <a href="{{url_for('courses')}}"> Courses</a>
             <a href="{{url_for('bookings')}}"> Bookings</a>
         </div>
-        
-        {% if student %} 
  
         <div>
             <a id="Signout" href="{{url_for('signout')}}">Signout</a>
@@ -28,6 +29,11 @@
 
         {% else %} 
 
+        <div class="navbar_middle">
+            <a href="{{url_for('index')}}">Home</a>
+            <a href="{{url_for('about')}}"> About Us</a>
+            <a href="{{url_for('courses')}}"> Courses</a>
+        </div>
 
         <div class="Login_Signup">
             <a id="Login" href="{{url_for('login')}}">Login</a>

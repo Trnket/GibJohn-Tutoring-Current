@@ -1,16 +1,34 @@
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='booking_styles.css')}}">
+</head>
+
 {% extends "layout.html" %} 
 
 {% block body %} 
 
-    {% if student %} 
- 
-    You are logged in as {{ student }}  
 
-    {% else %} 
 
-        You are not logged in. 
-     
-    {% endif %} 
+<div class="container">
+    <h1>Booking System</h1>
+    <form id="bookingForm" method="POST" action="/booking">
+        <label for="student_name">Student Name:</label>
+        <input type="text" id="student_name" name="student_name" required>
 
- 
+        <label for="Subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="teacher_name">Teacher Name:</label>
+        <input type="text" id="teacher_name" name="teacher_name" required>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <button type="submit">Book Now</button>
+    </form>
+</div>
+
+
 {% endblock %} 

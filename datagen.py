@@ -25,6 +25,14 @@ c.execute("""CREATE TABLE AdminDetails (
           Email text NOT NULL UNIQUE
           )""")
 
+c.execute("""CREATE TABLE Bookings (
+          Student_Name text NOT NULL,
+          Subject text NOT NULL,
+          Teacher_Name text NOT NULL,
+          Date text NOT NULL,
+          Time text NOT NULL
+          )""")
+
 conn.commit()
 
 conn.close()

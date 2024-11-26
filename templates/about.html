@@ -1,7 +1,47 @@
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='about_styles.css')}}">
+</head>
+
 {% extends "layout.html" %} 
 
 {% block body %} 
 
-<div class="about_container"></div>
+
+<div class="about">
+    <h1>About Us</h1>
+    <p>Welcome to GibJohn Tutoring, your premier online tutoring platform dedicated to helping students of all ages and skill levels achieve academic success.</p>
+
+    <section>
+        <h2>Our Story</h2>
+        <p>GibJohn Tutoring was founded by John Gibson, a passionate educator with over a decade of teaching experience. John's journey in education began as a maths teacher in a public secondary school, where he witnessed firsthand the impact that one-on-one instruction can have on a student's academic trajectory. He saw how students who received individual attention and support were more likely to excel in their studies, develop a growth mindset, and pursue their passions with confidence.</p>
+        <p>Inspired by this experience, John created GibJohn Tutoring to bring this same level of personalised instruction to students everywhere. Our online platform allows us to reach students from all over the world, providing them with access to expert tutors, interactive learning tools, and a supportive community that celebrates their successes and helps them overcome challenges.</p>
+    </section>
+
+    <section>
+        <h2>Our Team</h2>
+        <p>Our team of tutors is comprised of experienced educators, subject matter experts, and passionate learners who share our commitment to providing exceptional instruction. Each tutor undergoes a rigorous vetting process, ensuring that they possess the knowledge, skills, and teaching style that aligns with our high standards. Our tutors are dedicated to creating a safe, supportive, and engaging learning environment that fosters growth, creativity, and critical thinking.</p>
+    </section>
+
+    <section>
+        <h2>Our Values</h2>
+        <ul>
+            <li><strong>Personalisation</strong>: We believe that every student learns differently, and our tutors work closely with each student to create a customised learning plan that addresses their unique needs and goals.</li>
+            <li><strong>Excellence</strong>: We strive for excellence in everything we do, from the quality of our tutors to the effectiveness of our instructional methods.</li>
+            <li><strong>Empathy</strong>: We understand that learning can be challenging, and our tutors are trained to provide emotional support, encouragement, and guidance to help students overcome obstacles and stay motivated.</li>
+            <li><strong>Innovation</strong>: We stay at the forefront of educational technology, incorporating innovative tools and methods that enhance the learning experience and make it more engaging and fun.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Our Promise</h2>
+        <p>At GibJohn Tutoring, we promise to provide a supportive, inclusive, and stimulating learning environment that helps students achieve their academic goals. We promise to listen to our students, understand their needs, and adapt our instruction to meet their unique requirements. We promise to be a partner in your educational journey, providing guidance, encouragement, and support every step of the way.</p>
+    </section>
+
+    <section>
+        <h2>Get Started</h2>
+        <p>Ready to unlock your full potential? Explore our tutoring services, meet our tutors, and discover how GibJohn Tutoring can help you achieve academic success.</p>
+    </section>
+</div>
+
 
 {% endblock %} 

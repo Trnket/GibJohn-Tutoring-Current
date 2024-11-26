@@ -1,5 +1,5 @@
 <head></head>
-    <link rel="stylesheet" href="{{url_for('static', filename='signup_login_styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='menu_signup_login_styles.css')}}">
 </head>
 
 {% extends "layout.html" %} 
@@ -20,6 +20,7 @@
     <div class="box">
         <h2>Admin</h2>
         <img src="{{url_for('static', filename=('admin.png '))}}" alt="Picture of Admin ">
+        <br/>
         <a href="{{url_for('admin_login')}}" class="button">Admin Login</a>
     </div>
 </div>
